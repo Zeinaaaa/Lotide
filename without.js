@@ -1,4 +1,3 @@
-
 const eqArrays = function(arr1, arr2) {
   if (arr1.length !== arr2.length) {
     return false;
@@ -20,10 +19,19 @@ const AssertArraysEqual = function(arr1, arr2){
   }
 };
 
-// TEST CODEeqArrays([1, 2, 3], [1, 2, 3]) // => true
-AssertArraysEqual([1, 2, 3], [3, 2, 1])// => false
+const without = function (source, itemsToRemove) {
+  let answer = [];
+  for (let i = 0; i < source.length; i++) {
+    if (!itemsToRemove.includes(source[i])) {
+      answer.push(source[i]);
+    }
+  }
+  console.log(answer);
+}
+let source = [ 1,5,7,8];
+let itemsToRemove = [1,7];
 
-AssertArraysEqual(["1", "2", "3"], ["1", "2", "3"]) // => true
-AssertArraysEqual(["1", "2", "3"], ["1", "2", 3])// => false
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); 
+AssertArraysEqual(words, ["hello", "world", "lighthouse"]);
 
-AssertArraysEqual([1, 2, 3], [1, 2, 3]);
