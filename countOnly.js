@@ -4,6 +4,7 @@ const assertEqual = function(actual, expected) {
   } else {
     console.log(`👎🏻 Assertion Failed: ${actual} !== ${expected}`);
   }
+
 };
 
 const countOnly = function(allItems, itemsToCount) {
